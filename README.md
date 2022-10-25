@@ -1,4 +1,4 @@
-# Ethereum_Payments_Application
+# Ethereum Payments Application
 
 This application is a marketplace where FinTech professionals can list their services and their hourly rate; persons looking to hire these professionals can pay them in Ether. It uses a private blockchain through Ganache for testing purposes, but could easily be connected to any of Ethereum's testnets, or their mainnet.
 
