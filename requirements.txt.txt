@@ -1,0 +1,8 @@
+streamlit
+typing
+dataclasses
+web3
+os
+requests
+dotenv
+bip44
