@@ -1,51 +1,55 @@
 # Ethereum_Payments_Application
 
-# Blockchain_Ledger_System
+This application is a marketplace where FinTech professionals can list their services and their hourly rate; persons looking to hire these professionals can pay them in Ether. It uses a private blockchain through Ganache for testing purposes, but could easily be connected to any of Ethereum's testnets, or their mainnet.
 
-[This application is a blockchain based ledger system created through Python and the front-end library Streamlit](https://rrmangum-blockchain-ledger-system-pychain-yq41hj.streamlitapp.com/). It allows a user to enter various data and then add blocks (data containers) to a chain of blocks (list). The data is hashed using the SHA256 hashing algorithm from hashlib. The blockchain includes the hash of the previous block in each new block to ensure the chain remains un-altered.
+![functioning_app](https://github.com/rrmangum/Ethereum_Payments_Application/blob/main/Images/Functioning_App.png?raw=true)
 
-![streamlit_appplication_blockchain](https://github.com/rrmangum/Blockchain_Ledger_System/blob/main/Images/Adding_blocks.png?raw=true)
+## Validated Transactions
 
-### Validated Chain
-![validated_chain](https://github.com/rrmangum/Blockchain_Ledger_System/blob/main/Images/validating_the_chain.png?raw=true)
+![Amount_Sent_Proof](https://github.com/rrmangum/Ethereum_Payments_Application/blob/main/Images/Ganache_Amount_Sent_Proof.png?raw=true)
+
+![Sent_Transaction](https://github.com/rrmangum/Ethereum_Payments_Application/blob/main/Images/Ganache_Sent_Transaction_Proof.png?raw=true)
+
+![Account_Balance](https://github.com/rrmangum/Ethereum_Payments_Application/blob/main/Images/Ganache_Account_Balance_Proof.png?raw=true)
 ---
 
 ## Technologies
 
 This analysis uses python Python and the following libraries:
-* [Pandas](https://pandas.pydata.org/) - Provides data manipulation and visualization necessary to conduct this analysis
 * [dataclass](https://docs.python.org/3/library/dataclasses.html) - Provides a decorator and functions for automatically adding generated special methods.
 * [Typing](https://docs.python.org/3/library/typing.html) - Provides runtime support for type hitns
-* [datetime](https://docs.python.org/3/library/datetime.html) - Provides classes for manipulating dates and times
-* [hashlib](https://docs.python.org/3/library/hashlib.html) - Implements a common interface to many different secure hash and message digest algorithms
+* [streamlit](https://streamlit.io/) - Provides a Python library for easily creating frontend applications
+* [web3](https://web3py.readthedocs.io/en/v5/) - A Python library for interacting with Ethereum
+* [Requests](https://requests.readthedocs.io/en/latest/) - A Python HTTP library
+* [dotenv](https://github.com/theskumar/python-dotenv) - Reads key-value pairs from a .env file and sets them as envrionment variables
+* [bip44](https://github.com/kigawas/python-bip44) - Python support for Bitcoin Imrpovement Proposal 44
+
 ---
 
 ## Installation Guide
 
-Proceed to [this link](https://rrmangum-blockchain-ledger-system-pychain-yq41hj.streamlitapp.com/) if you just want to use the application. If you want to repurpose the application for your own use follow the installation instructions below.
-
 1. Download [Anaconda](https://www.anaconda.com/products/distribution) to your computer. 
 
-2. Clone the repo to your local machine
+2. Download [Ganache](https://trufflesuite.com/ganache/) to your computer.
 
-3. Navigate to the directory of the cloned repo in your terminal or gitbash
+3. Clone the repo to your local machine
 
-4. Run the following command in your terminal or gitbash:
-```python
-pip install -r requirements.txt
-```
+4. Navigate to the directory of the cloned repo in your terminal or gitbash
 
 5. Run the following command in your terminal or gitbash:
 ```python
-streamlit run pychain.py
+pip install -r requirements.txt
 ```
+6. Open Ganache and click quickstart. Copy the mnemonic phrase that is provided. Paste the mnemonic phrase into your own .env file like so:
+```python
+MNEMONIC = "<YOUR_SEED_PHRASE>"
+```
+MAKE SURE YOU LEAVE GANACHE RUNNING OR THE APPLICATION WILL NOT FUNCTION CORRECTLY
 
----
-
-## Usage
-
-This application can be used by any interested person however they see fit.
-
+7. Run the following command in your terminal or gitbash:
+```python
+streamlit run fintech_finder.py
+```
 ---
 
 ## Contributors
